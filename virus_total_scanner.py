@@ -68,7 +68,7 @@ if __name__ == '__main__':
 		sys.exit()
 
 	#get hashes
-	hashes = hash_extracter.main("SHA256", "asdf")
+	hashes = hash_extracter.main(args.hash_type, args.file)
 	#print(len(hashes))
 	scan = Scanner(args.key, hashes, args.dir)
 	scan.run()
